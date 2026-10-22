@@ -19,6 +19,8 @@ public class dbfuckery {
         }
     }
 
+    public static void resetDB()
+
     public static void main(String[] args) {
         try {
             Connection conn = DriverManager.getConnection(db);
@@ -26,6 +28,7 @@ public class dbfuckery {
             System.out.println("DB Connection Failed");
             System.err.println(e);
         }
+
 
 
 
