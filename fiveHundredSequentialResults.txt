@@ -1,0 +1,7 @@
+Searches distributed systems 500 times sequentailly
+
+Server URL: http://localhost:8008
+Search term: distributed systems
+Responses: 500
+Total response time: 1.868872 seconds
+Average time per response: 0.003738 seconds

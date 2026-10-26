@@ -1,0 +1,7 @@
+Buys Surviving College 500 times sequentailly
+
+Server URL: http://localhost:8008
+Search term: 12365
+Responses: 500
+Total response time: 3.045117 seconds
+Average time per response: 0.006090 seconds
