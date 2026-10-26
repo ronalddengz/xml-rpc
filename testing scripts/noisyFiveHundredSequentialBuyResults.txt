@@ -1,3 +1,5 @@
+500 noisy buys, took longer as expected (our log is fucked)
+
 Server URL: http://localhost:8008
 Search term: 12365
 Responses: 500
