@@ -1,0 +1,5 @@
+Server URL: http://localhost:8008
+Search term: 12365
+Responses: 500
+Total response time: 5.767467 seconds
+Average time per response: 0.011535 seconds

@@ -1,0 +1,7 @@
+Noisy 500 search (3 other clients connected running searches as fast as possible) (faster for some fucking reason)
+
+Server URL: http://localhost:8008
+Search term: distributed systems
+Responses: 500
+Total response time: 0.296709 seconds
+Average time per response: 0.000593 seconds

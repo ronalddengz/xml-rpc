@@ -5,7 +5,7 @@ import xmlrpc.client
 SERVER_URL = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8008"
 SEARCH_TERM = sys.argv[2] if len(sys.argv) > 2 else 12365
 REQUEST_COUNT = 500
-OUTPUT_FILE = "fiveHundredSequentialBuyResults.txt"
+OUTPUT_FILE = "noisyFiveHundredSequentialBuyResults.txt"
 
 
 def main():
