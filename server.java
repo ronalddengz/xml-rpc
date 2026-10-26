@@ -116,10 +116,10 @@ public class server {
             logStatement.setInt(3, remainingStock);
             logStatement.executeUpdate();
         } catch (SQLException exception) {
-            return "Purchase completed, but logging failed: " + exception.getMessage();
+            return "Logging failure: " + exception.getMessage();
         }
 
-        return "Purchase completed. Remaining stock: " + remainingStock;
+        return "bought book id " + item_number + ", remaining stock: " + remainingStock;
     }
 
     public synchronized String log() {
