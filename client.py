@@ -1,14 +1,9 @@
 import sys
 import xmlrpc.client
 
-SERVER_URL = "http://localhost:8008"
+SERVER_URL = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8008"
 
-def main():
-    command = sys.argv[1]
-    value = " ".join(sys.argv[2:])
-
-    server = xmlrpc.client.ServerProxy(SERVER_URL)
-
+def run_command(server, command, value):
     try:
         if command == "search":
             result = server.bookstore.search(value)
@@ -33,4 +28,20 @@ def main():
         print("Could not connect to the server: " + str(error))
 
 if __name__ == "__main__":
-    main()
+    server = xmlrpc.client.ServerProxy(SERVER_URL)
+    command = None
+    value = -1
+
+    while True:
+        commandString = input("Command: ")
+        commandString = commandString.split(" ")
+        command = commandString[0]
+        if len(commandString) > 1:
+            value = ' '.join(commandString[1:])
+        else:
+            value = -1
+        if command == "exit":
+            sys.exit(1)
+        
+        run_command(server, command, value=value)
+    

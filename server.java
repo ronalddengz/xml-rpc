@@ -210,7 +210,6 @@ public class server {
         } catch (Exception exception) {
             System.err.println("Server: " + exception); 
         }
-
     }
 
 }

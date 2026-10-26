@@ -1,6 +1,10 @@
 import java.sql.*;
 
-public class adminServer {
+import org.apache.xmlrpc.server.PropertyHandlerMapping;
+import org.apache.xmlrpc.server.XmlRpcServer;
+import org.apache.xmlrpc.webserver.WebServer;
+
+public class zDEPRCadminServer {
         
     static String bookdb = "jdbc:sqlite:books.db";
     static String logdb = "jdbc:sqlite:log.db";
@@ -35,7 +39,18 @@ public class adminServer {
     }
 
     public static void main(String[] args) {
-        
+        try {
+            PropertyHandlerMapping phm = new PropertyHandlerMapping();
+            XmlRpcServer xmlRpcServer;
+            WebServer server = new WebServer(8009);
+            xmlRpcServer = server.getXmlRpcServer();
+            phm.addHandler("adminBookstore", server.class);
+            xmlRpcServer.setHandlerMapping(phm);
+            System.out.println("Admin Server starting on port 8008");
+            server.start();
+        } catch (Exception exception) {
+            System.err.println("Server: " + exception); 
+        }
         
     }
 }
